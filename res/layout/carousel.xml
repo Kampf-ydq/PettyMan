@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f6f6f6"
+    tools:context="com.yzp.viewpagedemo.MainActivity" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#303437"
+        android:id="@+id/carousel"
+        android:gravity="center_horizontal" >
+
+        <!-- 轮播图 -->
+
+        <RelativeLayout
+            android:id="@+id/topPanel_vpg"
+            android:layout_width="200dp"
+            android:layout_height="200dp" >
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/ViewPage_Detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:flipInterval="30"
+                android:persistentDrawingCache="animation" />
+
+            <LinearLayout
+                android:id="@+id/point_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:orientation="horizontal" >
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/tui_colum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/carousel" 
+        style="@style/list_item">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="推荐值"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:textColor="#969696"
+            android:text="80" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tui_colum"
+        style="@style/list_item" >
+
+        <TextView
+            android:id="@+id/intro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="商品详情"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/goods_intro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/intro"
+            android:layout_toRightOf="@id/intro"
+            android:textColor="#969696"
+            android:text="好书好书好书好书啊" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/list_item"
+        android:layout_alignParentBottom="true"
+        android:background="#E83632" >
+
+        <TextView
+            android:id="@+id/submit_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="15dp"
+            android:text="提交订单"
+            android:textColor="#fff" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <include layout="@layout/person_title"/>
+    
+    <LinearLayout style="@style/personal_main_layout">
+        <RelativeLayout style="@style/list_item">
+            <ImageView 
+                android:id="@+id/user_head"
+                android:src="@drawable/logo"
+                android:layout_width="70dp"
+                android:layout_height="70dp"/>
+            <TextView 
+                android:id="@+id/nick_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/user_head"
+                android:textSize="15sp"/>
+            <TextView 
+                android:id="@+id/stu_number"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/nick_name"
+                android:layout_below="@id/nick_name"
+                android:textSize="13sp"
+                android:textColor="#ffcccccc"/>
+
+            <TextView
+                android:id="@+id/edit_infor"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="@string/right_arrow" 
+                android:layout_marginRight="5dp"
+                android:gravity="center"/>
+       
+        </RelativeLayout>
+    </LinearLayout>
+    
+
+    <LinearLayout style="@style/personal_main_layout">
+        <RelativeLayout style="@style/edit_buttom">
+            <ImageView 
+                android:id="@+id/school_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/shcool_icon"
+                android:layout_centerVertical="true"/>
+            <TextView 
+                android:text="我的学校"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/school_icon"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"/>
+            <TextView 
+                android:id="@+id/school"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+    
+    <LinearLayout style="@style/personal_main_layout">
+        <RelativeLayout style="@style/edit_buttom">
+            <ImageView 
+                android:id="@+id/money_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/money_icon"
+                android:layout_centerVertical="true"/>
+            <TextView 
+                android:text="学习币"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/money_icon"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"/>
+            <TextView 
+                android:id="@+id/money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textStyle="italic"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+    
+     <LinearLayout style="@style/personal_main_layout">
+        <RelativeLayout style="@style/edit_buttom">
+             <ImageView 
+                android:id="@+id/add_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/address_icon"
+                android:layout_centerVertical="true"/>
+            <TextView 
+                android:text="收货地址"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/add_icon"
+                android:layout_marginLeft="5dp"/>
+            
+             <TextView
+                android:id="@+id/in_edit_add"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="@string/right_arrow" 
+                android:layout_marginRight="5dp"
+                android:gravity="center"/>
+        </RelativeLayout>
+    </LinearLayout>
+    
+
+</LinearLayout>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:orientation="vertical">
+ 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+ 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="支付详情"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp" />
+
+    </RelativeLayout>
+ 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#969696" />
+ 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="请选择支付方式"
+        android:textColor="#969696" />
+ 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#969696" />
+ 
+    <LinearLayout
+        android:id="@+id/dialog_my_wallet"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+ 
+ 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/money_pay"
+            android:layout_marginLeft="10dp"/>
+ 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+ 
+            
+            
+            <RelativeLayout 
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="3">
+                
+                <TextView
+                    android:id="@+id/my_wallet"
+	                android:layout_height="wrap_content"
+	                android:layout_width="wrap_content"
+	                android:text="我的钱包"
+	                android:padding="5dp" />
+                
+                
+                
+                <RelativeLayout 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/my_wallet"
+                    android:layout_marginLeft="5dp">
+                    
+                    <TextView
+		                android:id="@+id/show_balance"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:textSize="10sp"
+		                android:text="可用余额  : "
+		                android:textColor="#969696" />
+            
+	            <TextView 
+		                android:id="@+id/balance"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_toRightOf="@id/show_balance"
+		                android:textColor="#969696"
+		                android:textSize="10sp"
+		                android:text="50.0"
+		                />
+                    
+                </RelativeLayout>
+                
+                
+                
+            </RelativeLayout>
+            
+            <ImageView
+	            android:id="@+id/recharge_wallet_cb"
+	            android:visibility="invisible"
+	            android:layout_width="0dp"
+	            android:layout_weight="1"
+	            android:layout_height="wrap_content"
+	            android:layout_marginRight="15dp"
+	            android:src="@drawable/check_btn" />
+  
+        </LinearLayout>
+    </LinearLayout>
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#969696" />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/other_pay">
+        
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/other_pay"
+            android:paddingLeft="10dp"/>
+        
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            
+            <TextView
+	            android:text="其它"
+	            android:layout_width="0dp"
+	            android:layout_weight="3"
+	            android:layout_height="wrap_content"
+	            android:padding="5dp"
+	            android:layout_marginTop="5dp"
+	            android:layout_marginBottom="5dp"/>
+	        
+            <ImageView
+	            android:id="@+id/other_way_cb"
+	            android:visibility="invisible"
+	            android:layout_width="0dp"
+	            android:layout_weight="1"
+	            android:layout_height="wrap_content"
+	            android:layout_marginRight="15dp"
+	            android:src="@drawable/check_btn" />
+            
+        </LinearLayout>
+        
+        
+        
+    </LinearLayout>
+ 
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#969696" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:gravity="center_vertical"
+        android:minWidth="130dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+ 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="需付款" />
+ 
+        <TextView
+            android:id="@+id/recharge_num"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="25dp"
+            android:gravity="center"
+            android:textColor="#E83632"
+            android:textSize="18sp"
+            android:text="2.00" />
+ 
+    </LinearLayout>
+ 
+    <TextView
+        android:id="@+id/dialog_confirm_pay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#E83632"
+        android:gravity="center"
+        android:text="LmPay"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        android:textStyle="italic" />
+</LinearLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.eat"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:targetPackage="com.example.eat" >
+    </instrumentation>
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <uses-library android:name="android.test.runner" />
+
+        <activity
+            android:name="com.man.activity.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.man.activity.LoginActivity">
+        </activity>
+        <activity android:name="com.man.activity.RegistActivity">
+        </activity>
+        <activity android:name="com.man.activity.HomeActivity">
+        </activity>
+        <activity android:name="com.man.activity.PersonalActivity"></activity>
+        <activity android:name="com.man.activity.EditAddress"></activity>
+        <activity android:name="com.man.activity.LookAddress"></activity>
+        <activity android:name="com.man.activity.EditInfo"></activity>
+        <activity android:name="com.man.activity.LearnAcitity"></activity>
+        <activity android:name="com.man.activity.CourInfo"></activity>
+        <activity android:name="com.man.activity.gDetailActivity"></activity>
+        <activity android:name="com.man.activity.OrderActivity"></activity>
+        <activity android:name="com.man.activity.FindPwdActivity"></activity>
+        
+    </application>
+
+</manifest>
